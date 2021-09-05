@@ -2,13 +2,13 @@
 #zmodload zsh/zprof
 
 # Use powerline
-USE_POWERLINE="true"
+USE_POWERLINE="false"
 
 # Source manjaro-zsh-configuration
 if [[ -e $HOME/manjaro-zsh-config-portable/manjaro-zsh-config ]]; then
   source $HOME/manjaro-zsh-config-portable/manjaro-zsh-config
 fi
-# Use herschenglime-zsh-config/ zsh prompt
+# Use manjaro zsh prompt
 if [[ -e $HOME/manjaro-zsh-config-portable/manjaro-zsh-prompt ]]; then
   source $HOME/manjaro-zsh-config-portable/manjaro-zsh-prompt
 fi
