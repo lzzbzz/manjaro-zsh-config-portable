@@ -21,6 +21,8 @@
 [submodule "plugins/z.lua"]
 	path = plugins/z.lua
 	url = https://github.com/skywind3000/z.lua.git
+	shallow = true
 [submodule "plugins/zsh-vim-mode"]
 	path = plugins/zsh-vim-mode
 	url = https://github.com/softmoth/zsh-vim-mode.git
+	shallow = true
