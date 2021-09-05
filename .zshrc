@@ -4,9 +4,6 @@
 # Use powerline
 USE_POWERLINE="false"
 
-# disable gitstatusd (don't have permission to run)
-POWERLEVEL9K_DISABLE_GITSTATUS=true
-
 # Source manjaro-zsh-configuration
 if [[ -e $HOME/manjaro-zsh-config-portable/manjaro-zsh-config ]]; then
   source $HOME/manjaro-zsh-config-portable/manjaro-zsh-config
@@ -44,6 +41,9 @@ fpath=(~/.zsh/completions $fpath)
 #fzf keybinds and completion
 source ~/.zsh/fzf/completion.zsh
 source ~/.zsh/fzf/key-bindings.zsh
+
+# disable gitstatusd (don't have permission to run)
+POWERLEVEL9K_DISABLE_GITSTATUS=true
 
 # uncomment ↓ and the line at the top to enable profiling
 # zprof
