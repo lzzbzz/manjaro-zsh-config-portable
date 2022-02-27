@@ -13,10 +13,8 @@ if [[ -e $HOME/manjaro-zsh-config-portable/manjaro-zsh-prompt ]]; then
   source $HOME/manjaro-zsh-config-portable/manjaro-zsh-prompt
 fi
 
-# piping in aliases
-if [ -f ~/.zsh_aliases ]; then
-. ~/.zsh_aliases
-fi
+# auto complete pairs
+autopair-init
 
 # open command in editor
 # Enable Ctrl-x-e to edit command line
@@ -50,6 +48,11 @@ fpath=(~/.zsh/completions $fpath)
 #fzf keybinds and completion
 source ~/manjaro-zsh-config-portable/fzf/completion.zsh
 source ~/manjaro-zsh-config-portable/fzf/key-bindings.zsh
+
+# piping in aliases
+if [ -f ~/.zsh_aliases ]; then
+. ~/.zsh_aliases
+fi
 
 # uncomment ↓ and the line at the top to enable profiling
 # zprof
