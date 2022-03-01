@@ -13,10 +13,8 @@ if [[ -e $HOME/manjaro-zsh-config-portable/manjaro-zsh-prompt ]]; then
   source $HOME/manjaro-zsh-config-portable/manjaro-zsh-prompt
 fi
 
-# piping in aliases
-if [ -f ~/.zsh_aliases ]; then
-. ~/.zsh_aliases
-fi
+# auto complete pairs
+autopair-init
 
 # open command in editor
 # Enable Ctrl-x-e to edit command line
@@ -25,6 +23,15 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
+
+# z.lua for faster directory jumping
+eval "$(lua ~/manjaro-zsh-config-portable/plugins/z.lua/z.lua --init zsh enhanced)"
+# useful related aliases, I generally place them in .zsh_aliases though
+alias zz='z -c'      # restrict matches to subdirs of $PWD
+alias zi='z -i'      # cd with interactive selection
+alias zf='z -I'      # use fzf to select in multiple matches
+alias zb='z -b'      # quickly cd to the parent directory
+alias zh='z -I -t .' # fzf recent directories
 
 # shell vim mode
 source $HOME/manjaro-zsh-config-portable/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
@@ -44,6 +51,13 @@ source ~/manjaro-zsh-config-portable/fzf/key-bindings.zsh
 
 # disable gitstatusd (don't have permission to run)
 POWERLEVEL9K_DISABLE_GITSTATUS=true
+
+# piping in aliases
+if [ -f ~/.zsh_aliases ]; then
+. ~/.zsh_aliases
+fi
+
+autopair-init
 
 # uncomment ↓ and the line at the top to enable profiling
 # zprof

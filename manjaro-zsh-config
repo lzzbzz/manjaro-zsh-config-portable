@@ -78,6 +78,8 @@ export LESS=-R
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
 source $HOME/manjaro-zsh-config-portable/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Auto complete pairs in zsh
+source $HOME/manjaro-zsh-config-portable/plugins/zsh-autopair/autopair.zsh
 # Use history substring search
 source $HOME/manjaro-zsh-config-portable/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys to history substring search

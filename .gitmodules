@@ -26,3 +26,6 @@
 	path = plugins/zsh-vim-mode
 	url = https://github.com/softmoth/zsh-vim-mode.git
 	shallow = true
+[submodule "plugins/zsh-autopair"]
+	path = plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
