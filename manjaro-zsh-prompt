@@ -1,25 +1,25 @@
 # Apply different settigns for different terminals
 case $(basename "$(cat "/proc/$PPID/comm")") in
   login)
-      source $HOME/manjaro-zsh-config-portable/zsh-maia-prompt
+      source $HOME/.manjaro-zsh-config-portable/zsh-maia-prompt
     	alias x='startx ~/.xinitrc'
     ;;
   *)
       if [[ $TERM == "linux" ]]; then
         # TTY does not have powerline fonts
-        source $HOME/manjaro-zsh-config-portable/zsh-maia-prompt
+        source $HOME/.manjaro-zsh-config-portable/zsh-maia-prompt
         alias x='startx ~/.xinitrc'
       elif [[ "$USE_POWERLINE" == "true" ]]; then
         # Use powerline
-        source $HOME/manjaro-zsh-config-portable/themes/powerlevel10k/powerlevel10k.zsh-theme
-        [[ ! -f $HOME/manjaro-zsh-config-portable/p10k.zsh ]] || source $HOME/manjaro-zsh-config-portable/p10k.zsh
-        source $HOME/manjaro-zsh-config-portable/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source $HOME/.manjaro-zsh-config-portable/themes/powerlevel10k/powerlevel10k.zsh-theme
+        [[ ! -f $HOME/.manjaro-zsh-config-portable/p10k.zsh ]] || source $HOME/.manjaro-zsh-config-portable/p10k.zsh
+        source $HOME/.manjaro-zsh-config-portable/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
         ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
         ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
       else
         # Don't use powerline anyway
-        source $HOME/manjaro-zsh-config-portable/zsh-maia-prompt
-        source $HOME/manjaro-zsh-config-portable/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source $HOME/.manjaro-zsh-config-portable/zsh-maia-prompt
+        source $HOME/.manjaro-zsh-config-portable/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
         ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
         ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
       fi
