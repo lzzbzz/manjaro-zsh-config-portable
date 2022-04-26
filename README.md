@@ -1,5 +1,11 @@
 # What?
-I like the way that manjaro configures its zsh shell, so I made it portable to other os's utilizing git submodules to grab everything that would be pulled in as a package on manjaro. It also contains some of my additions, such as z.lua and fzf bindings. Clone the project with the following:
+I like the way that manjaro configures its zsh shell, so I made it portable to other os's utilizing git submodules to grab everything that would be pulled in as a package on manjaro. It also contains some of my additions, such as z.lua and fzf bindings. 
+
+Run this, if you do not have zsh setup yet:
+```
+chsh -s $(which zsh) && cd && git clone --recurse-submodules https://github.com/lzzbzz/manjaro-zsh-config-portable .manjaro-zsh-config-portable && cp .manjaro-zsh-config-portable/.zshrc .zshrc
+```
+Run this, if you already have zsh setup before:
 ```
 cd && git clone --recurse-submodules https://github.com/lzzbzz/manjaro-zsh-config-portable .manjaro-zsh-config-portable && mv .zshrc .zshrc-old && cp .manjaro-zsh-config-portable/.zshrc .zshrc
 ```
